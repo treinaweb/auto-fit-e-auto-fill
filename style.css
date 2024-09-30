@@ -1,0 +1,49 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+main {
+    min-height: 100vh;
+    display: grid;
+    padding: 0 1rem;
+    grid-template-columns: 1fr;
+    place-items: center;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(6, 33, 149, 1) 34%,
+        rgba(36, 56, 139, 1) 68%,
+        rgba(0, 0, 0, 1) 100%
+    );
+    color: #fff;
+}
+
+section {
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.item {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(16, 151, 61);
+    border: solid 2px black;
+}
+
+.auto-fit,
+.auto-fill {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.auto-fill {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
